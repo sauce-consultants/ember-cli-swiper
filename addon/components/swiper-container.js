@@ -23,6 +23,10 @@ export default Ember.Component.extend({
       options.loop = true;
     }
 
+    if (this.get('effect')) {
+      options.effect = this.get('effect');
+    }
+
     if (this.get('initialSlide')) {
       options.initialSlide = this.get('initialSlide');
     }
@@ -31,7 +35,7 @@ export default Ember.Component.extend({
     if (this.get('followFinger')) {
       options.followFinger = false;
     }
-    
+
     // disable all user interactions
     if (this.get('onlyExternal')) {
       options.onlyExternal = true;
@@ -64,7 +68,7 @@ export default Ember.Component.extend({
     if (this.get('grabCursor')) {
       options.grabCursor = true;
     }
-    
+
     if (this.get('breakpoints')) {
       options.breakpoints = this.get('breakpoints');
     }
